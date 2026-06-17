@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Directory</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f5f2ed;color:#1d2a3a}
+.container{display:grid;grid-template-columns:280px 1fr 360px;min-height:100vh}
+.sidebar{background:#fff;padding:24px;border-right:1px solid #ddd}
+.logo{font-size:28px;font-weight:bold;margin-bottom:30px;color:#0b2341}
+.menu a{display:block;padding:14px;text-decoration:none;color:#333;border-radius:8px;margin-bottom:8px}
+.menu a:hover{background:#f1ebe2}
+.main{padding:50px;background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop') center/cover}
+.overlay{background:rgba(255,255,255,.85);padding:40px;max-width:700px;border-radius:16px}
+h1{font-size:56px;margin-bottom:20px}
+p{line-height:1.7}
+.qrpanel{background:#fff;padding:30px;border-left:1px solid #ddd;display:flex;align-items:center;justify-content:center}
+.card{text-align:center}
+.qr{width:240px;height:240px}
+.btn{display:inline-block;margin-top:20px;background:#0b2341;color:white;padding:12px 20px;border-radius:8px;text-decoration:none}
+@media(max-width:1000px){
+.container{grid-template-columns:1fr}
+.sidebar,.qrpanel{border:none}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<aside class="sidebar">
+<div class="logo">SUNSET HOTEL</div>
+<nav class="menu">
+<a href="#">Accueil</a>
+<a href="#">Services de l'hôtel</a>
+<a href="#">Informations pratiques</a>
+<a href="#">Restaurant & Bar</a>
+<a href="#">Bien-être</a>
+<a href="#">Attractions</a>
+<a href="#">Plan de l'hôtel</a>
+<a href="#">Contact</a>
+</nav>
+</aside>
+
+<main class="main">
+<div class="overlay">
+<h1>Bienvenue au Sunset Hotel</h1>
+<p>
+Retrouvez toutes les informations utiles de votre séjour :
+services, horaires, restauration, activités, Wi‑Fi et contacts.
+</p>
+<a class="btn" href="tel:+33123456789">Appeler la réception</a>
+</div>
+</main>
+
+<aside class="qrpanel">
+<div class="card">
+<h2>Scannez le QR Code</h2>
+<p>Accédez au Room Directory</p>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://votre-site.com" alt="QR Code">
+</div>
+</aside>
+</div>
+</body>
+</html>
