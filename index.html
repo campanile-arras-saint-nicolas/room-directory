@@ -3,61 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Room Directory</title>
+<title>Hotel Guide Mobile</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f5f2ed;color:#1d2a3a}
-.container{display:grid;grid-template-columns:280px 1fr 360px;min-height:100vh}
-.sidebar{background:#fff;padding:24px;border-right:1px solid #ddd}
-.logo{font-size:28px;font-weight:bold;margin-bottom:30px;color:#0b2341}
-.menu a{display:block;padding:14px;text-decoration:none;color:#333;border-radius:8px;margin-bottom:8px}
-.menu a:hover{background:#f1ebe2}
-.main{padding:50px;background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop') center/cover}
-.overlay{background:rgba(255,255,255,.85);padding:40px;max-width:700px;border-radius:16px}
-h1{font-size:56px;margin-bottom:20px}
-p{line-height:1.7}
-.qrpanel{background:#fff;padding:30px;border-left:1px solid #ddd;display:flex;align-items:center;justify-content:center}
-.card{text-align:center}
-.qr{width:240px;height:240px}
-.btn{display:inline-block;margin-top:20px;background:#0b2341;color:white;padding:12px 20px;border-radius:8px;text-decoration:none}
-@media(max-width:1000px){
-.container{grid-template-columns:1fr}
-.sidebar,.qrpanel{border:none}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:#f6f7fb;
+  color:#1f2937;
+}
+
+/* HEADER MOBILE */
+.header{
+  background:white;
+  padding:16px;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.header h1{
+  font-size:16px;
+}
+
+/* CONTAINER */
+.container{
+  padding:16px;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0ea5e9,#6366f1);
+  color:white;
+  padding:20px;
+  border-radius:18px;
+}
+
+.hero h2{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.hero p{
+  font-size:13px;
+  opacity:0.9;
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  margin-top:12px;
+  background:white;
+  color:#111827;
+  text-align:center;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* MENU GRID */
+.menu{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.card{
+  background:white;
+  padding:14px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card h3{
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* BOTTOM NAV (mobile style Airbnb) */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:white;
+  border-top:1px solid #eee;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  font-size:12px;
+  color:#374151;
+  text-align:center;
+}
+
+/* espace pour éviter que le bas cache le contenu */
+.spacer{
+  height:70px;
+}
+
 </style>
+
 </head>
+
 <body>
+
+<div class="header">
+  <h1>🏨 Campanile Arras Saint-Nicolas</h1>
+</div>
+
 <div class="container">
-<aside class="sidebar">
-<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://votre-site.com" alt="QR Code">
 
-<div class="logo">
-  <img class="logo-hotel" src="logocampanile.png" alt="Campanile Arras Saint-Nicolas">
-  <h2>CAMPANILE ARRAS SAINT-NICOLAS</h2>
-</div>
-<nav class="menu">
-<a href="#">Accueil</a>
-<a href="#">Services de l'hôtel</a>
-<a href="#">Informations pratiques</a>
-<a href="#">Restaurant & Bar</a>
-<a href="#">Bien-être</a>
-<a href="#">Attractions</a>
-<a href="#">Plan de l'hôtel</a>
-<a href="#">Contact</a>
-</nav>
-</aside>
+  <div class="hero">
+    <h2>Bienvenue 👋</h2>
+    <p>Votre guide hôtel accessible depuis votre téléphone.</p>
+    <a class="btn" href="tel:+33123456789">Appeler la réception</a>
+  </div>
 
-<main class="main">
-<div class="overlay">
-<h1>Bienvenue au CAMPANILE ARRAS SAINT NICOLAS</h1>
-<p>
-Retrouvez toutes les informations utiles de votre séjour :
-services, horaires, restauration, activités, Wi‑Fi et contacts.
-</p>
-<a class="btn" href="tel:+33123456789">Appeler la réception</a>
-</div>
-</main>
+  <div class="menu">
+
+    <div class="card">
+      <h3>🛎️ Services</h3>
+      <p>Wi-Fi, ménage, réception</p>
+    </div>
+
+    <div class="card">
+      <h3>🍽️ Restaurant</h3>
+      <p>Horaires & menu</p>
+    </div>
+
+    <div class="card">
+      <h3>📍 Infos</h3>
+      <p>Check-in / check-out</p>
+    </div>
+
+    <div class="card">
+      <h3>🗺️ Plan</h3>
+      <p>Accès hôtel</p>
+    </div>
+
+  </div>
+
+  <div class="spacer"></div>
 
 </div>
+
+<!-- BOTTOM NAV MOBILE -->
+<div class="bottom-nav">
+  <a href="#">Accueil</a>
+  <a href="#">Services</a>
+  <a href="#">Infos</a>
+  <a href="#">Contact</a>
+</div>
+
 </body>
 </html>
